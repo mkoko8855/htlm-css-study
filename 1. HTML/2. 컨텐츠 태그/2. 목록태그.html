@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 헤더 태그는 웹 페이지의 소개 및 메뉴 등의 탐색에 대해 도움을 주는 컨텐츠를 나타낸다.
+    EX) 로고, 검색 폼, 메뉴 네비게이션 등등..(화면 중앙 상단에 위치했던 그런 메뉴들)-->
+
+    <!-- 태그 자체 기능은 없지만 해당 부분이 헤더라고 상징적으로 말해주는 태그이다.-->
+    <!-- div로 잡아도 되지만, 헤더는 html을 좀 더 구조화 시키고 명확하게 표현하기 위함이다.-->
+
+
+    <header>
+        <h1>리스트 태그 학습!</h1>
+    </header>
+
+
+
+
+
+
+<!-- 섹션도 헤더와 마찬가지로 기능은 없지만 문서의 일반적인 영역을 나타내며
+의미없는 영역을 표시할 때 주로 사용한다.-->
+
+    <section>
+        <h2>오늘 장 볼 내용(순서가 없는 리스트)</h2>
+         <ul> <!-- ul은 unordered list로, 말 그대로 순서 없는. 즉, 정렬되지 않은 리스트다. -->
+            <li>우유</li> <!-- 목록 구현은 li를 사용한다.-->
+            <li>치즈</li> <!-- li는 ul 안에서만 사용 가능하다 -->
+            <ul>
+                <li>크림치즈</li> 
+                <li>모짜렐라 치즈</li>
+                <li>체다 치즈</li>
+            </ul>
+            <li>양파</li>
+         </ul>
+    </section>
+
+
+
+
+
+<!--이번엔 순서가 중요하다면? -->
+<section>
+    <h2>라면 끓이기</h2>
+    <ol type="I"> <!--ol은 타입 설정이 가능하다. 마음에 드는거 설정하면 된다. "치고 고르면 됨-->
+        <li>스프 넣기</li> <!-- li는 ul이든 ol이든 상관없이 이후에 사용 하면 됨 -->
+        <li>물 끓이기</li>
+        <li>면 투하</li>
+        <li>계란, 파, 등 재료 넣기</li>
+        <li>맛있게 먹기</li>
+    </ol>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
