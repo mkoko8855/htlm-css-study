@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+
+    <style>
+
+        /* 클래스는 .으로, id는 #으로 표현한다. */
+        /* 클래스와 id는 동시에 지목 가능하다*/
+        .btn {   
+            height: 34px;
+            background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
+            border: 1px solid #d5d5d5;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.5;
+            cursor: pointer;
+            box-sizing: border-box;
+            position: relative;
+            color: #333;
+        }
+
+        .btn-primary {
+            border: 1px solid #65b836;
+            color: #fff;
+            background: #55a532 linear-gradient(#91dd70, #55ae2e);
+        }
+
+        .btn:hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.07);
+        }
+
+        .btn-pink {
+            border: 1px solid #f060d1;
+            color: #fff;
+            background: #f060d1 linear-gradient(#f3baf0, #de56f0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 클래스 이름을 복수로 지정하면 css를 다채롭게 지정 가능하다. -->
+    <button id="join-btn" class="btn">Join</button> <!--id는 하나만 작성해..-->
+    <button class="btn btn-primary">Login</button>
+    <button class="btn btn-pink">버튼</button>
+
+
+    <!-- 현재 있는 문서에서 요소를 얻어낸다.즉, id를통해서. id가 'btn'이라는 요소를 얻어온 후,
+         클릭이 발생하면 function(경고창 : alert)을 출력해라. 그러나 Join만 클릭될 뿐, Login과 버튼은 이벤트가 먹질 않는다.
+         이래서 id를 중복을 하면 안되고 class로 줘라..-->
+    <script>
+        document.getElementById('join-btn').onclick = function() { 
+            alert('버튼이 클릭됨!');
+        }
+
+        /*클래스 이름이 btn-primary 라는 것이 css 요소들을 먹음*/
+        document.querySelector('.btn-primary').onclick = function(){
+            alert('로그인 버튼이 클릭됨')
+        }
+
+    </script>
+
+
+</body>
+</html>
