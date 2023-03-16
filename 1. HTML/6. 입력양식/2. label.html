@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+        <!--
+            label 요소는 입력 양식의 제목 역할을 한다.
+            for라는 속성을 사용하여 입력 양식과 연결 할 수 있다.
+            무엇을 입력해야 하는지에 대한 정보를 전달할 뿐 아니라
+            label을 클릭함으로 input 자체에 집중 할 수 있는 역할도 한다.
+        -->
+
+
+
+        <!-- label의 입력 방식은 2가지 이다.-->
+
+        <!-- label은 입력 양식은 아니지만 관계가 있다. -->
+
+
+
+
+        <!--    1. 자동로그인과 인풋타입을 한번에 감싸면 자동 로그인 글씨를 클릭해도 체크표시가 된다! -->
+    <form action="#">
+        <label>
+            <input type="checkbox" name="auto-login">
+             자동 로그인
+        </label>
+
+
+
+        <!--    2. 이번엔 label로 감싸지 않았지만 for와 id타입을 일치 하게 했다. -->
+        <input type="checkbox" name="auto-login2" id="auto">
+        <label for="auto">자동 로그인2</label>
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

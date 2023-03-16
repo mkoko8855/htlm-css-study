@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- radio 보다는 다른 형태의 표현 방법, 그리고 커피와 주스 따로 그룹화까지 시키고 이름붙이자 -->
+
+    <form action="#">
+        <select name="drink">
+            <optgroup label="Coffee">
+                <option value="ame">Americano</option> <!--dirnk라는 값을 끌고 왔을 때 ame로 전달하게끔!-->
+                <option value="esp" selected>Espresso</option> <!--selected는 가장 기본값으로 설정하게 해준다. -->
+                <option value="cl">Caffee Latte</option>
+                <option value="capp">Cappuccino</option>
+            </optgruop>
+
+            <optgroup label="Non-coffee">
+                <option value="orange">Orange Juice</option>
+                <option value="apple">Apple Juice</option>
+                <option value="grape">Grape Juice</option>
+            </optgruop>
+        </select>
+
+
+
+
+
+        <br><br><br>
+
+        <hr>
+
+
+
+
+        <!-- select태그 말고 다른 태그는? datalist이다. datalist태그는 input과 함께 사용한다. -->
+
+        <input type="text" list="fruits">               <!--list값은 datalist id값과 같게. -->
+        <datalist id="fruits">
+            <option>Apple</option>
+            <option>Banana</option>
+            <option>Orange</option>
+            <option>Grape</option>
+            <option>Mango</option>
+        </datalist>
+        
+
+
+
+
+
+
+
+
+
+
+    </form>
+
+
+
+
+
+
+
+
+</body>
+</html>

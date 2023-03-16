@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>YS</title>
+    <style>
+        table{
+            border-collapse : collapse;
+        }
+    </style>
+</head>
+
+
+<body>
+    
+    <caption>공연시간 / 요금정보</caption> <!-- 테이블 표에 대한 제목을 캡션 태그를 쓰면 된다. -->
+
+    <table border="1">
+        <!-- 7행 3열이라는 것을 알 수가 있다.  테이블을 만들자 -->
+
+        <tr>
+            <td comsplan="3">공연 요금</td>   <!-- 셀 3칸을 병합 해야겠다.-->
+        </tr>
+
+
+        <tr>
+            <td>구분</td>
+            <td>S석</td>
+            <td>VIP</td>
+        </tr>
+
+
+        <tr>            
+            <td>성인</td>
+            <td>50,000원</td>
+            <td>70,000원</td>
+        </tr>
+
+
+        <tr>
+            <td>청소년</td>
+            <td>40,000원</td>
+            <td>50,000원</td>
+        </tr>
+
+
+        <tr>
+            <td>소인</td>
+            <td colspan="2">미취학 아동 일반 요금의 50%</td>  <!-- 2칸을 가로 병합을 했다. -->
+        </tr>
+
+
+        <tr>
+            <td rowspan="2">공연시간</td>  <!-- 세로 병합을 해야 한다. -->
+            <td>1회</td>
+            <td>13:00 ~ 15:00</td>
+        </tr>
+
+
+        <tr>
+            <td>2회</td>
+            <td>17:00 ~ 19:00</td>
+        </tr>
+
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
