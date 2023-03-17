@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    <style>
+        .eco{ /*이거는 모든 요소들이 다 먹는다. 부모가 가진 요소를 가진이 다 물려받음*/
+            color: red;
+            font-size: 30px;
+        }
+
+
+        
+        .eco .plant{ /*에코 안에 식물*/    /*식물 이라는 div 안에있는 해바라기, 튤립, 소나무 만 먹음*/
+                     /*왜? 얜 20점이고 .eco{}는 10점이다. 우선순위가 높기에 빨간색이 안먹고 여기에 먹는 애들만 초록색으로 밀리게 된다*/
+            color: green;
+            font-size: 15px;
+        }
+
+
+
+        
+
+
+
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+
+    <div class="eco">
+        <div class="animal">동물</div>
+        <div class="plant">식물
+            <div>해바라기</div>
+            <div>튤립</div>
+            <div>소나무</div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

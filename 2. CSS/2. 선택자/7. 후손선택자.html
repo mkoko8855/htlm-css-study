@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+
+    <style>
+        div .orange { /*div의 내부에 있는 모든 자식들 중 orange클래스인 애들을 다 바꾼다는 것*/
+            color : orange;
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+
+
+<h1>안녕안녕~</h1>
+
+
+    <div>
+        <ul>
+            <li>사과</li>
+            <li class ="orange">오렌지</li> <!-- css스타일의 div > .orange 먹이면 이건 안바뀐다. 왜? 직속 자식이 아니다. 근데 > 말고 공백만 쓴다면 먹는다 -->
+            <li>딸기</li>
+        </ul>
+    </div>
+
+
+
+    <div>당근</div>
+    <p>토마토</p>
+    <span class ="orange">오렌지</span>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+
+
+    <style>
+        ul > li::before{   /*ul태그의 모든 li요소들 중, 
+                         before는 우리가 지정한 선택자 앞에 가상 요소를 추가한다.
+                         after는 뒤에 가상 요소를 추가한다*/
+            
+            content: '번호';  /*번호라는 텍스트 요소를 넣어주고*/
+            font-weight: bold;
+            color: red;
+            margin-right: 20px;              /*즉, 번호의 오른쪽 여백을 줌*/
+
+        }
+
+
+
+
+        ul > li::after {
+            content: '';  /*글자 쓸거 없으면 ''만 써도됨*/
+            width:10px;
+            height:10px;
+            background: red;      /*10px의 정사각형 모양의 빨간색 배경짜리가 나오는가? ㄴㄴ글자 안쓰면 디스플레이 줘야 됨*/
+            display : inline-block; /*그러면 이제 빨간색 사각형이 나옴*/
+            border-radius: 50%;     /* 50%둥글게 */
+            margin-left:10px;       /* 왼쪽여백을 10px정도 주겠다.*/
+        }
+
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+    
+
+   <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+   </ul>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

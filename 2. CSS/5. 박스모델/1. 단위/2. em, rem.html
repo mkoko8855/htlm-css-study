@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    <style>
+
+        html{   /*기본 html 폰트 사이즈는 16인데 10으로 바꿨다. 그럼 3rem은 30이 되겠지. */
+            font-size: 10px;
+        }
+
+
+        body *{
+            border: 2px solid black;
+        }
+
+
+        .container{
+            font-size: 20px;
+            width: 60em;     /* em은 자기 폰트 사이즈를 따라간다. 폰트 사이즈의 몇배인지 지목 가능하다. 폰트사이즈가 20인데 60em이니 20의 60배를 뜻한다. 즉, width는 1200px이 된다. */
+        }
+
+
+        .parent{
+            width : 50%;    /* 600px이 된다. */
+            font-size: 2em; /* 패런트의 폰트 사이즈는 기존의 패런트 사이즈를 알아야겠지. 부모가 물려주니, 컨테이너에서 물려받아 20px에서 2em(2배)니까 40px이 된다.*/
+        }
+
+
+        .child{
+            width : 30%;    
+            font-size: 3rem;  /* rem은 html의 기본 폰트 사이즈를 기준으로 몇배인지 설명한다. 기본은 우리가 건드리지 않았으니 16px이다. 즉, 얜 48px이다. */
+        }
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+
+
+    <!-- .container{Container}>.partent{Parent}>.child*2{child$} -->
+    <div class="container">Container
+        <div class="partent">Parent
+            <div class="child">child1</div>
+            <div class="child">child2</div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+</html>

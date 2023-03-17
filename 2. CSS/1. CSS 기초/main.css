@@ -1,0 +1,10 @@
+
+@import "./side.css";
+/* side.css가 main.css로 합쳐지게 된다.*/
+
+
+
+h1, p{
+    color: red;
+    background: orange;
+}

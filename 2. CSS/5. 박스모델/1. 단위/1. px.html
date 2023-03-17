@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        body * {   /*바디태그 안의 모든 요소*/
+            border : 2px solid black;
+        }
+
+
+
+
+
+
+
+        .container{
+            width: 1200px;   /* width는 길이 */
+        }
+
+        .parent{
+            width: 50%;   /* 퍼센트는 부모를 기준으로 한다. 패런트 부모가 컨테이너다. 패런트의 width는 컨테이너의 50%를 가지니 얘는 600px이 된다. */
+        }
+
+        .child{
+            width: 30%;   /* 패런트 width가 600이니 30%를 하면 child는 180px를 가지게 된다. */
+        }
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <!-- .container{Container}>.partent{Parent}>.child*2{child$} -->
+    <div class="container">Container
+        <div class="partent">Parent
+            <div class="child">child1</div>
+            <div class="child">child2</div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

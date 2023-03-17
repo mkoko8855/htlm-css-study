@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    <style>
+        .parent {
+            width: 300px;
+            height: 200px;
+            /* 여기가 250이면 넘치지 않아서 오버플로우가 auto인 상태에서는 스크롤이 안나오는 것을 확인 할 수가 있다. */
+            border: 4px solid #000;
+            overflow: auto;
+            /* hidden은 넘치는 부분을 지워줌, scroll은 말그대로 스크롤, auto는 스크롤과 같지만 넘치지 않으면 스크롤이 사라진다. */
+        }
+
+
+        .child {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 4px solid orange;
+            font-size: 40px;
+        }
+
+
+
+        .tx1 {
+            border: 1px solid #777;
+            width: 300px;
+            height: 300px;
+            overflow: auto; /*알아서 스크롤이 생길 것이다. 라틴어가 흘러넘치지 않을 것임.*/
+        }
+    </style>
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+    <!--  .parent>.child*2{$}     -->
+
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+    </div>
+
+
+
+
+    <hr>
+
+
+
+
+    <p class="tx1">
+        안녕하세요. 반갑습니다. 좀만 참으세요~~
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper lacinia ultricies. Maecenas fermentum
+    tempus imperdiet. Nullam rhoncus convallis sagittis. In nisi nisl, aliquam eu efficitur in, rutrum ac ex.
+    Suspendisse quis dolor ac nisi malesuada gravida non nec nulla. Aenean dapibus nibh non velit tempor consequat.
+    Nam sed mauris id augue varius tempor.
+
+    Suspendisse potenti. Praesent euismod ac tellus id mattis. Vestibulum vel mi vestibulum, malesuada massa
+    tristique, pellentesque eros. Suspendisse et condimentum tellus, et feugiat lectus. Ut consectetur nibh velit,
+    id blandit dui porta vitae. In quis feugiat erat. Aliquam eleifend dapibus est id dapibus. Donec ultrices vel
+    elit at viverra.
+
+    Pellentesque blandit tellus non tincidunt placerat. Duis erat ligula, luctus a lacinia non, posuere at neque.
+    Aenean vestibulum justo nec felis posuere fermentum. Aenean a leo imperdiet, porta orci vel, vulputate felis.
+    Curabitur semper erat ac consequat accumsan. Sed aliquam imperdiet turpis at pretium. Cras fermentum hendrerit
+    venenatis. Phasellus venenatis, ante ut sagittis fermentum, urna velit accumsan mauris, nec ornare ante turpis
+    vel augue. In porta scelerisque interdum. Sed neque ipsum, mattis eget ligula sed, accumsan aliquam eros. Donec
+    egestas, leo ac lacinia porta, massa metus blandit mi, vitae feugiat tellus eros in turpis. Sed placerat rhoncus
+    pulvinar. Ut finibus massa at ante laoreet, quis imperdiet est tempus. Nam a porta ipsum, nec faucibus enim.
+
+    Sed faucibus mattis velit, ac vestibulum felis tincidunt in. Suspendisse vitae maximus sapien, id pretium
+    lectus. Nullam in consectetur ex. Pellentesque tristique ipsum in rhoncus dignissim. Phasellus fringilla pretium
+    nisi, vel scelerisque nisi dapibus id. Pellentesque habitant morbi tristique senectus et netus et malesuada
+    fames ac turpis egestas. Sed ullamcorper porttitor turpis, at pretium tellus fringilla in. Quisque eget justo
+    convallis, laoreet sapien eu, malesuada nisi. Suspendisse id lectus quis ipsum viverra ornare.
+
+    Maecenas quis aliquam turpis. Nam sem mauris, porta id ullamcorper et, malesuada nec est. Ut id pretium ex.
+    Nullam a feugiat odio. Cras convallis eros a massa ultricies, at sodales sem finibus. Curabitur ullamcorper enim
+    eget neque lacinia, sit amet varius ligula condimentum. Nullam quis vestibulum sem, pellentesque aliquam erat.
+    Aliquam auctor, urna nec dapibus rutrum, mi risus placerat ex, et faucibus quam est ac velit. Sed egestas ante
+    eu ex vulputate, faucibus efficitur quam pretium. Nam accumsan sollicitudin nisi, ut viverra augue consectetur
+    et. Nam non ex turpis.
+        <!-- 더미 텍스트를 더 작성하고싶은데 헛소리를 계속 할 수 없으니
+             로렘입숨을 구글에 쳐서 들어가면 더미텍스트를 만들어 준다.
+             라틴어로 이루어져 있는데 아무 뜻도 없다. 실제로 현업에서도 많이 사용한다.
+        -->
+    </p>
+
+  
+    
+
+
+
+
+
+</body>
+
+</html>

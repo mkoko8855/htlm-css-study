@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+<style>
+    ul > .orange{    /* 꺽새가 바로 자식 선택자 이다. 직속자식만을 지목할 수 있다. ul의 직속자식은 li이다. ol은 안쪽에 있기 때문에 안됨.*/
+        color : orange;
+    }
+
+    div > ul > li {  /* 폰트는 부모가 가진 속성을 자식들도 다 물려 받는다 */
+        font-weight : bold;
+    }
+
+
+    div > ul > li > ol {    /* 폰트가 아니기 때문에 해당하는 것들만 영향을 받는다. */
+        color : yellow;
+    }
+
+
+
+</style>
+
+
+
+</head>
+<body>
+    
+
+    <h1>안녕안녕~</h1>
+
+
+    <div>
+        <ul>
+            <li>사과 <!-- 사과안에다가 순서가 있는 리스트를 또 3개 만들어줌 -->
+                <ol>
+                    <li>1번째</li>
+                    <li>2번째</li>
+                    <li>3번째</li>
+                </ol>
+            </li>
+            <li class="orange">오렌지</li>
+            <li>딸기
+                <ol> <!-- ol>li*3{$번째} 라고 하면 3줄의 1번째, 2번째, 3번째 가 출력되면서 생긴다! -->
+                    <li>1번째</li>
+                    <li>2번째</li>
+                    <li>3번째</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+
+
+    <div>당근</div>
+    <p>토마토</p>
+    <span class="orange">오렌지</span>
+
+
+
+
+
+</body>
+</html>

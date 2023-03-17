@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+<style>
+    .parent{
+        width: 1000px;
+        height: 300px;
+        border : 4px solid blue;
+        margin: 20px;
+    }
+
+
+
+    .child{
+        background: orange;
+        /*박스 지정할 떄 width 지정하지 않으면 100%(기본값)이 된다. 근데 부모값 받으니 1000px이 된다.*/
+        max-width: 400px;  /*400px이라고 했으니 width는 400으로 줄어들었다. 원래 1000이다. 그러나, max라는 제한을 줘버려서 줄어드는 것을 볼 수 있다. 물론 점수 높은 얘가 오면 바꿔지겠지만.. */
+        min-height: 200px; /*height 지정하지 않으면 0px인데 최소200px이라고 했으니 200px이다. */
+    }
+
+</style>
+
+
+
+
+</head>
+<body>
+    
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+
+
+
+
+</body>
+</html>

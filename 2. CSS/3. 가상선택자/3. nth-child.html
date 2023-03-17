@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    <style>
+        .fruits > li:nth-child(4){ /*몇번째 자식인지 적어주면 된다. 그럼 4번째인 망고가 색을 먹는다 */
+            color: orange;
+        }
+
+
+
+        .fruits > li:nth-child(even){ /*만약 짝수번째만 고를거면? 즉, 짝수번째 자식들만 색 먹음*/
+            color: blue;
+        }
+
+
+
+        .fruits > li:nth-child(odd){  /*이건 홀수번째 애들이다*/
+            color: red;
+        }
+
+
+
+        /*만약 딸기 망고 파인애플(규칙적이지 않다면?)을 지목하고 싶다면? 1번째 4번째 7번째니까 */
+        .fruits > li:nth-child(3n + 1){  /*n이 0부터 들어온다. 즉, n키워드는 0부터 해석*/
+            color: violet;
+        }
+
+
+
+
+
+        .food > p:nth-child(1){   /*클래스 이름이 food라는 div안쪽에 있는 모든 자식 중, p태그의 첫번째의 폰트스타일을 italic으로 바꿈*/
+                                  /*그럼 볶음밥만 먹음(기울어짐) 근데 안됨. 왜? 첫번째 자식을 찾는데 첫번째 자식은  p가 아니기 떄문이다.*/
+                                  /* 즉, food의 첫번째 자식이 p가 아니기 때문에 지목해서 스타일을 지정할 수 없다. */
+                                  /*p:nth가 아니라 div:nth라고 해야 지정이 된다. div는 첫번쨰 자식이 맞으니까.*/
+            font-style: italic;
+        }
+
+
+
+        /* 같은 종류의 요소 중 n번째 요소를 지목. 여기에 방정식처럼 even이나 add도 먹음 */
+        .food > p:nth-of-type(2){ /* nth-child가 아니라 이러면 가능하다. 지목은 얘를 쓰는게 났다.*/
+                                  /* 즉, nth는 정확하게 일치해야하지만 얜 좀 관대하다. 이제 볶음밥이 먹을 것이다.*/
+            font-style: italic;
+        }
+
+
+
+        
+        .box-gruop > div > div:nth-child(1){    /*이건 3-1 만 빨간색으로 먹는것을 볼 수 있다*/
+            color: red;
+            font-weight: bold;
+        }
+
+
+
+
+
+        /*부정 선택자*/
+        .fruits > li:not(.orange){  /*fruits의 자손들 중 li에서, 클래스이름이 오렌지가 아닌 애들만 먹여라 라는 의미*/
+            list-style-type: none;  /*출력 결과는 오렌지를 제외한 쩜(.)이 다 없어지는 것을 볼 수 있다*/
+        }
+
+
+
+
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+    <ul class="fruits">
+        <li>딸기</li>
+        <li>사과</li>
+        <li class="orange">오렌지</li>
+        <li>망고</li>
+        <li>바나나</li>
+        <li>복숭아</li>
+        <li>파인애플</li>
+    </ul>
+
+
+
+
+
+
+
+    <hr> <!--그냥 구분선 하나 그어줌-->
+
+
+
+
+
+
+
+    <div class="food">
+        <div>짜장면</div>
+        <p>볶음밥</p>
+        <p>닭강정</p>
+        <span>짬뽕</span>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <hr> <!--그냥 구분선 하나 그어줌-->
+
+
+
+
+
+
+
+
+        <!--     .box-gruop>div*3{$}      -->.
+        <div class="box-gruop">
+            <div>1</div>
+            <div>2</div>
+            <div>3
+                <!-- div*3{3-$} -->
+                <div>3-1</div>
+                <div>3-2</div>
+                <div>3-3</div>
+            </div>
+        </div>
+
+
+
+
+
+</body>
+</html>

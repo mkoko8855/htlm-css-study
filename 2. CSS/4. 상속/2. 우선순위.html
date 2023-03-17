@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        div{  /*태그 선택자인 1점*/
+            color: red !important;  /*그러나 뒤에 !important가 붙으면 우선순위 점수가 무한점이다. 얘는 아무도 못이겨서 빨간색으로 고정된다.*/
+                                      /*그러나 정말 중요한 것이 아니라면 !important를 남용하면 안된다*/
+        }
+
+        .c-green{  /*클래스 선택자가 태그 선택자보다 우선순위임. 얘는 10점이니까.*/
+            color: green;
+        }
+
+
+        #i-yellow{  /*id선택자가 위 두개보다 우선순위다. 얘는 100점이니까.*/
+            color: yellow;
+        }
+
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+    
+
+    <div id="i-yellow" class="c-green" style="color:orange;">Hello</div>
+    <!-- 인라인속성으로 style을 먹였더니 된다. 얜 1000점이다. -->
+
+
+
+    <!---
+    .list li.item{} = 21점
+
+    #submit span{} = 101점
+
+    h1{} = 1점
+
+    .list li:hover{} = 21점
+
+    .box::bofore{} = 21점
+
+    header.menu li:nth-child(2){} = 22점
+
+    :not(.box){} = 0점
+
+    :not(span){} = 0점
+    
+    그러나, 더 길게 써서 점수를 더 줘서 먼저 먹게 할 수도 있다. -->
+
+
+
+
+
+</body>
+</html>

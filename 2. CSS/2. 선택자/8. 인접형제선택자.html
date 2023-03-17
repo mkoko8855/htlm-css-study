@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .orange + li {  /*오렌지 라는 요소 다음에 있는 li요소에 컬러 먹인다는 뜻이다. 즉, 오렌지 다음인 망고가 노란색으로 먹는다. */
+            color: yellow;  /*글씨 색깔을 노랑으로*/
+        }
+
+
+        li + li{   /* 얘는 사과 오렌지 망고 포도가 폰트가 커진다. 즉, 딸기를 제외한 li의 다음 요소인 li들이 크기가 커진다*/
+            font-size: 24px;
+        }
+
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+    
+    <ul>
+        <li>딸기</li>
+        <li>사과</li>
+        <li class = "orange">오렌지</li>
+        <li>망고</li>
+        <li>포도</li>
+    </ul>
+
+
+
+
+
+
+</body>
+</html>

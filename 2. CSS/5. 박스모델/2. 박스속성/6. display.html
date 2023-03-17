@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    <style>
+        span{   
+            display : block;   /*스팬을 블럭으로 지정해서 width, height 같은 것들이 다 먹는다. */
+            width : 100px;
+            height : 100px;
+            background: red;
+        }
+
+
+
+        a{
+            display: block;    /*a도 블럭 처리 해서 다른 것들을 적용 시켰다. inline;으로 하면 좀 이상하게 바뀐다. 그래서 inline-block을 쓴다. */
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+
+
+
+        .box{
+            height: 100px;
+            background: skyblue;
+            margin-top: 40px;
+        }
+
+
+
+
+        .box > input:nth-child(2){    /*none주면 1, 2, 3, 4, 5, 6 중 2번째가 사라진다. */
+            display: none;
+        }
+
+
+
+
+
+    </style>
+
+
+
+
+
+</head>
+<body>
+    
+      <!-- span와 a는 인라인 요소들이라 width height줘도 의미 없음 
+      그러나 블록 요소를 바꿔버릴 수 있다. -->
+
+    <span>display 속성 공부!</span>
+
+    <a href="#">게시판</a>
+
+    <a href="#">방명록</a>
+
+
+
+
+
+
+    <div class="box">
+        <input type="text" value="1">
+        <input type="text" value="2">
+        <input type="text" value="3">
+        <input type="text" value="4">
+        <input type="text" value="5">
+        <input type="text" value="6">
+    </div>
+
+
+
+
+
+</body>
+</html>

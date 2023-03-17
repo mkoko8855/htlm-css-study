@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+<style>
+    *{
+        color : red;  /*그럼 모든 요소들이(글씨들이) 빨간색으로 변한다.*/
+    }
+
+    div *{
+        font-style : italic; /*div 후 공백 후 별을 찍는 것은 div안쪽(내부)에 있는 모든 것 이라고 해석하면 된다.*/
+                             /*맨 아래 당근은 div하나이다. 요소가 존재 하지 않기에 해당이 되질 않는다.*/
+    }
+</style>
+
+
+
+
+</head>
+<body>
+    
+    <h1>안녕안녕~</h1>
+
+
+    <div>
+        <ul>
+            <li>사과</li>
+            <li>오렌지</li>
+            <li>딸기</li>
+        </ul>
+    </div>
+
+
+
+    <div>당근</div>
+    <p>토마토</p>
+    <span>오렌지</span>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
