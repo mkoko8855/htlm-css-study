@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>YS</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+
+<style> 
+
+    a {
+        color : inherit; /*부모가 물려준 대로 감. 즉, 다 없어짐*/
+        text-decoration: none;  /*밑줄 지우기*/
+    }
+
+    nav{
+        background: gray;
+        width: 60%;
+        padding: 15px;  /*패딩을 해도 박스가 커지지 않길 원하면 box-sizing 보더를 주자 안주면 상하좌우 15씩 커짐.*/
+        box-sizing: border-box;
+        margin: 20px auto 0;  /*위로 20 좌우 오토 아래 0*/
+        
+    }
+
+
+    nav ul li {  /*네브 안에 ul, ul안에 li들에 대해서.*/
+        /*글씨들의 상하 공간이 타이트해서 마진을 조금 주자*/
+        margin-bottom: 10px;
+        width:fit-content; /*li의 맞게 자동으로 맞춰져서 조금 더 커지게끔 fit content를 줬다.*/
+
+       
+    }
+
+    nav ul li:last-chile{
+    /*근데 마진 바텀을 줬더니, 맨 아래 마진과 맨 위 마진이 서로 다르다. 아래 마진이 더 넓다. 마지막은 주지 않기 위해서 */
+        margin-bottom: 0;
+        }
+
+
+    nav ul li a{
+        font-size: 1.5em;
+        font-weight: bold;
+        color: white;
+        display: block;
+        padding : 15px; /*패딩 살짝 더 줬다.*/
+        text-shadow: 5px 5px 20px #000; /*x축 y축 블럭크기 색상 순으로 줄 수 있다. 각 그림자의 크기를 뜻한다.*/
+    }
+
+    
+    /*호버가 발생하면 색깔을 변경해주자*/
+    nav ul li a:hover{
+        color: yellow;
+        background: skyblue;
+    }
+
+</style>
+  
+
+</head>
+<body>
+    
+
+     <!--reset.css로 인해 패딩.마진 다 없어지고 h1도 달라졌다. -->
+
+     <nav>
+        <ul>
+            <li>
+                <a href="#">[주문] 긴급재난지원금을 쿠X에서 사용할 수 있나요?</a>
+            <li>
+
+            <li>
+                <a href="#">다슬기를 키우고 싶은데 어떤 환경이 필요한가요?</a>
+            </li>
+
+            <li> 
+                <a gref="#">달팽이가 집을 나갔습니다. 어떻게 하죠??</a>
+            </li>
+        </ul>
+     </nav>
+</body>
+</html>

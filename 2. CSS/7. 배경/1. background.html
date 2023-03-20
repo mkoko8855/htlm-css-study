@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    <style>
+        .box{
+            width: 550px;
+            height: 350px;
+            border: 2px solid gray;
+            background-color: yellow;
+            background-image: url(./images/basic.jpg);
+            background-size: cover;   /* 아예 안주면 기본값이 오토, 즉. 원본 이미지 크기로 지정 됨 픽셀이나 em ,%같은 걸로 따로 줘도 됨 
+                                            cover를 주면 배경 이미지의 크기비율을 유지하지만 요소의 더 넓은 범위에 맞춘다. 
+                                            그래서 커버는 짤릴 수 있지만, contain은 어거지로 맞추기 때문에 반복되는 이미지가 나올 수 있다.
+                                            */
+
+
+            background-repeat: no-repeat;   /*이건 기본값이 repeat. 즉, 반복을 안한다.
+                                            repeat-x 나 repeat-y라면 x쪽으로 반복, y쪽으로 반복된다.
+                                            repeat는 전부 반복된다. 지금은 no로 줬다.
+                                            */
+
+
+            background-position: 50% 50%;   /*퍼센트나 픽셀이나 em줘도 되는데 가로축 세로축을 한번에 지정 해주자 */
+                                            /*원본 송아지 사진은 사진이 짤리지만 송아지 포지션을 가로50% 세로50% 만큼 내려서 잡아달라고 한 것이다.
+                                              size도 cover로 해준다면 송아지가 잘 보인다.
+                                              둘다 100%로 주면 가로100% 세로100%로 이동하는 거니 우측 하단쪽으로 포지션이 이동하겠다.
+
+                                              즉, 가로축과 세로축을 한번에 지정 가능하며 가로축만 사용하면 세로축은 가운데 정렬,
+                                              % > 왼쪽 상단 0% 0%, 오른쪽 하단이 100% 100%으로 출력이 된다. 
+                                            */
+
+
+
+
+            
+
+            /*단축 속성으로도 한번에 지정할 수 있다.*/
+            /* background: yellow url(./images/sky.jpg) no-repeat 0% 0% / cover; */
+            /*색, 경로, repeat, position, size 순으로 한번에 주자*/
+            /*no-repeat 0% 0%가 아니라 0% 0% 자리에 bottom쓰면 중앙 아래 정렬 됨*/
+
+
+        }
+    </style>
+
+
+</head>
+<body>
+    
+
+
+
+
+
+
+<div class="box"></div>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+
+    <style>
+        section.tea {
+            width: 500px;
+            padding: 10px;
+            border: 5px solid #caa;
+            margin: 20px auto 0;   /*박스위치 위 20px 양옆오토 아래 0*/
+            background: pink;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div {  /*둘다 적용하려고 구분 안하고 일단 div로 했다.*/
+            width: 200px;
+            padding: 15px;
+        }
+
+        div p {
+            text-align: justify;   /*양쪽정렬*/
+            text-indent: 5px;      /*첫문장 뒤로 땡겨짐*/
+            line-height: 1.1;
+        }
+
+        .green {
+            background: #dda;
+            float: left;
+        }
+
+        .coffee {
+            background: #ba7;
+            float: right;   /*양옆으로 찢어줬음*/
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+
+         /*그리고 부모 요소를 감싸, 즉 div를 감싸고 있는 섹션이지?
+          섹션클래스에 clearfix를 추가해준다. 그럼 부모가 자식을 인식해서
+          크기가 정상적으로 된다. 
+          */
+
+    </style>
+
+</head>
+
+<body>
+
+    <section class="tea clearfix">
+        <h1>녹차와 커피</h1>
+        <div class="green">
+            <p>
+                녹차는 은은한 향을 좋아하는 사람들이 애용하는 차이다. 녹차를 마실 줄 모르는 사람들은
+                티백들을 모두 뜯어 주전자에 넣고 끊이기도 하는데 강한 차의 향기도 견디기 힘들겠지만
+                보관도 힘들고 그때그때 방금 끓인 듯한 맛을 느끼지 못하게 되며 진한 카페인 덕에 밤에
+                잠들기도 힘들 것이다.
+            </p>
+        </div>
+        <div class="coffee">
+            <p>
+                커피는 독한 향을 좋아하는 사람도 매우 좋아하며 심한 경우 태어나기 전부터 커피를 마신
+                듯 강한 중독 증세를 보이는 경우가 많다. 심지어 원두를 씹어서 향에 자신을 담그는 사람도
+                있고 설탕, 시럽 등 다른 조미를 절대로 허락하지 않는 오직 커피맛만을 고집하는 마니아들
+                이 늘고 있다.
+            </p>
+        </div>
+    </section>
+
+</body>
+
+</html>

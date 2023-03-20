@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    <style>
+
+        .box{  
+            width : 150px;
+            height : 100px;
+            background: red;
+            font-size : 30px;
+            color : #fff;
+            margin : 10px;  /*상 하 좌 우 로 10px씩.*/
+            float : left;     /* left는 왼쪽부터 차곡차곡 채운다. 그래서 상자가 수평정렬이 된다. 
+                              light는 떠서 3 2 1 형식으로 된다. 
+                              즉, float은 좌우 정렬을 하기 위해 사용한다. 
+                            */
+        }
+
+
+
+        .new-box{
+            width : 200px;   /*float은 안먹는 것을 볼 수 있다. 아무 속성 안줬으니 원래 있어야 될 곳에 위치한다. 
+                              만약 위에 float가 left라면, 겹친 상태가 된다. 즉 1, 2, 3번은 붕 띄운 상태가 된다.
+                             */
+            height : 150px; 
+            background : orange;
+            /*float을 해제를 해야 깔끔하게 되는데.. clear 속성을 사용해서 떠있는(float)박스들을 내림으로써 정렬할 수 있다. 
+            위 float가 똑같이 right면 clear로 right로 해준다면 밑으로 내려온다.
+            */
+            clear : left;    /*clear에는 둘다 해제를 할꺼면 both 속성을 써도 된다. */
+        }
+        
+       
+        
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="new-box">4</div>
+    
+</body>
+</html>

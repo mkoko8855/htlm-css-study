@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    <!--브라우저에서 구글 폰트 입력 후 사이트 들어가서 무료로 받을 수 있다.-->
+    <!--링크태그로 복사 복붙으로 가능하다. -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet"> -->
+
+
+
+        <!-- 다운로드 받아서 구글 폰트를 사용하는 방법도 있다. 
+         쿠키런 폰트라고 검색어에 친 후, 우린 TTF(용량적음) 로 받아도 된다.
+         압축 풀고 파일 들어가서 3개 드래그 후 폰트 폴더에 fonts 폴더 하나 만들어 준 후 드래그로 갖다 붙이자.
+         선언을 하나 해준다면 바로 사용 가능하다.
+         CSS문법이기에 스타일안에다가 @font-face{
+                                    font-family: 'CookieRun';  /*앞으로 이 글씨체 쓸때마다 이걸 불러 쓰면 된다. */
+                                    src : url(./fonts/CookieRun\Regular.ttf);
+                                    써주면 된다. 
+                                }
+
+        
+        
+        
+        -->
+
+
+
+
+
+
+    <style>
+
+        @font-face{
+            font-family: 'CookieRun';  /*앞으로 이 글씨체 쓸때마다 이걸 불러 쓰면 된다. */
+            src : url(./fonts/CookieRun\Regular.ttf);
+        }
+
+
+
+
+        div{
+            font-size: 30px;
+            margin-bottom: 30px;  /*보기 쉽게 간격좀 벌렸음*/
+        }
+
+        .font1{
+            font-family: serif; /*바탕체(명조체) 계열들은 serif라는 이름을 가지고 있다. 세리프..*/
+        }
+
+        .font2{
+            font-family: sans-serif; /*고딕체 계열들은 sans-serif라는 이름을 가지고 있다.*/
+        }
+
+        .font3{
+            font-family: monospace;  /*모노스페이스 계열들은 가로폭이 동등한 글꼴 계열*/
+        }
+
+        .font4{
+            font-family: cursive;    /*컬시브는 필기체 계열*/
+        }
+        
+        .font5{
+            font-family: fantasy;    /*화려한 계열*/
+        }
+
+        .font6{
+            /*브라우저에서 구글 폰트 입력 후 사이트 들어가서 무료로 받을 수 있다. 
+              상업적으로 사용해도 문제가 없는 폰트들만 모아놨다. 
+            */
+            font-family: 'Jua', sans-serif;
+        }
+
+        /*맨위에꺼 링크로 폰트바꾸는건 주석 처리 하고, 임포트의 방식도 있다. 복사 붙여넣기 하면 폰트 사용하면 된다. */
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+
+
+        /*쿠키런체 적용*/
+        h1{
+            font-family: 'CookieRun', sans-serif; /*폰트패밀리는 2개 이상 적어주는 것이 규칙이다. 얘가 표현이 안되면 대체할 수 있는 것이 필요하기 때문이다. */
+            font-size: 30px;
+            font-weight: bold;
+            font-style: oblique; /*기울어짐*/
+            line-height: 1.4em;
+            
+            /*font: oblique bold 30px / 1.4 'CookieRun', sans-serif; 로 한꺼번에 단축속성으로 써도됨 */
+            /*스타일 두께 크기 / 줄높이 글꼴 순이며, 
+            단축 속성 사용 시 font-size와 font-family가 필수로 지정해야 한다!!!!!!!!!!!!!!!!!! */
+        }
+
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+    <div class="font1">Hello World!</div>
+    <div class="font2">Hello World!</div>
+    <div class="font3">Hello World!</div>
+    <div class="font4">Hello World!</div>
+    <div class="font5">Hello World!</div>
+    <div class="font6">우리가 어떤 민족입니까!</div>
+
+
+
+    <!--쿠키런체를 적용 해보자-->
+    <h1>용감한 쿠키가 달립니다</h1>
+
+
+
+
+</body>
+</html>

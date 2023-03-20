@@ -16,7 +16,7 @@
 
 
         a{
-            display: block;    /*a도 블럭 처리 해서 다른 것들을 적용 시켰다. inline;으로 하면 좀 이상하게 바뀐다. 그래서 inline-block을 쓴다. */
+            display: block;    /*a도 블럭 처리 해서 다른 것들을 적용 시켰다. inline-block;으로 하면 블럭은 세로로 출력이되지만 가로로 출력되게 할 수 있다.  그래서 inline-block을 쓴다. */
             width: 100px;
             height: 100px;
             background: green;
@@ -37,6 +37,12 @@
             display: none;
         }
 
+
+
+        .hide {
+            /* display: none; */
+            opacity: 0;
+        }
 
 
 
