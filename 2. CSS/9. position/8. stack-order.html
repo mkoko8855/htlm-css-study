@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container .box {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            border: 4px dashed black;
+
+            font-size: 30px;
+            margin-right: -30px;  /*겹치게 하려고 -를 줌*/
+            float: left;
+        }
+
+        .box1 {
+            z-index: 0;      /*옆인 -200보다 크기 떄문에 -200보다 위다. */
+        }
+
+        .box2 {
+            z-index: -200;    
+        }
+
+        .box3 {
+            z-index: 100;   /*얘는 -200보다 크고 0보다도 크기 떄문에 얘네 둘보다 위로감*/
+        }
+
+        .box4{
+            z-index:10;
+        }
+
+        .box5{
+            z-index:10;  /*임의로 박스의 높낮이를 제어하는 것이 z-index이다. z-index의 값은 상대적인 수치이다. 9999주면 제일 위겠지.*/
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="box box1">1</div>  <!--클래스를 box랑 box1씩 총 2개씩 줌-->
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+    </div>
+    
+</body>
+</html>

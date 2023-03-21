@@ -1,0 +1,48 @@
+            
+            
+            
+            
+                    /*
+                    
+                    공용 css 파일에 공통적으로 지정할 스타일을 모아놓고 간단하게
+                    링크를 통해서 불러올 수 있다.
+
+                    */
+
+
+
+@import url('https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css');
+
+
+
+
+
+*{
+    box-sizing: border-box;  /*패딩을 줘도 박스 크기가 변하지 않음*/
+}
+
+
+
+
+
+body{
+    font-size: 18px;
+}
+
+
+
+
+a{
+    /*리셋.css는 a를 초기화 해주지 않으니 직접 해주자*/
+    color : inherit;  /*부모꺼 물려받음*/
+    text-decoration: none;  /*밑줄이 없는 보통 글자*/
+}
+
+
+
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear:both;
+}

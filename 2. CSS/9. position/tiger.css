@@ -1,0 +1,188 @@
+
+@import url('../../common.css');
+
+/* base style */
+body {
+    background: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    font-family: '굴림', 'Gulim', serif; /*폰트 패밀리는 여러개 적을 수 있다. */
+}
+
+#wrapper {
+    width: 50%;     /*부모인 바디의 50%만*/
+    margin: 0 auto;     /*윗마진은 따로 주지 않았다. 양쪽의 동일한 마진을 갖는다.*/
+}
+
+/* header style */
+header {
+    background: #123456;
+    padding: 10px;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #cc0;
+    text-align: center;
+    font-family: 'Jua', cursive;
+}
+
+header h1 strong {
+    font-size: 3em;    /*30px에서 3배 커져라! 그래서 90으로!*/
+    color: #fff;
+}
+
+header h1 span {
+    font-size: 1.5em;   /*기존의 1.5배 커져라*/
+}
+
+header h1 em {
+    font-size: 2em;
+    color: #ccc;
+}
+
+/* end header style */
+
+
+/* begin container style */
+.container {
+    background: #ccc;
+}
+
+.container .menu {
+    float: left;
+    width: 20%;
+    padding: 20px;
+}
+
+.container .menu li {
+    margin-bottom: 8px;
+    text-decoration: underline;
+}
+
+.container .menu li a:hover {
+    color: #662;
+    border-bottom: 1px dashed #662;
+}
+
+.container .content {
+    background: #fff;
+    float: right;
+      /*메뉴가 20퍼이니 얘는 80퍼*/
+    width: 80%;
+}
+
+.container .content h2 {
+    background: #800;
+    color: #ee0;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 5px 20px;
+    font-family: '궁서', cursive;
+}
+
+.container .content p {
+    padding: 20px;
+    text-align: justify;      /*양쪽(좌우측) 정렬, 저스티파이는 2줄 이상일 때만 작동한다.*/
+}
+
+/* footer style */
+footer {
+    background: #aaa;
+    padding: 10px 20px;
+}
+
+footer address {
+    color: #000;
+}
+
+
+
+
+
+
+/* 호랑이를 주제로 한 민화 : 휴먼모음T
+body{
+    background: #666;
+}
+
+#wrapper{
+    margin: 0 10% 10%;
+}
+
+header{
+    background: rgb(20, 54, 84);
+    color: rgb(204, 202, 56);
+}
+
+header strong{
+    color: white;
+    font-size: 2em;
+    font-weight: 900;
+}
+
+header span{
+    font-size: 1.3em;
+}
+
+header em{
+    color: white;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+.container{
+    background: rgb(204, 204, 204);
+
+}
+
+.menu{
+    float:left;
+    width:150px;
+}
+
+.content>h2{
+    background: rgb(134, 0, 0);
+    color: rgb(238, 236, 67);
+    height: 50px;
+    line-height: 50px;
+    padding: 0 0 0 160px;
+    font-size: 23px;
+}
+
+.content>p{
+    background : white;
+    padding : 10px 0px 20px 162px;
+    
+}
+
+footer{
+    background: rgb(170, 170, 170);
+    height: 50px;
+}
+
+header{
+    height: 120px;
+    text-align: center;
+    line-height: 120px;
+}
+
+h1 > strong{
+    font-size: 50px;
+}
+
+h1 > span{
+    font-size: 40px
+}
+
+
+h1 > em{
+    font-size: 45px;
+}
+
+.content{
+    margin-left: 15%;
+} */

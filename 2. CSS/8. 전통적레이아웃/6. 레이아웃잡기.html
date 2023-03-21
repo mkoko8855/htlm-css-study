@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+
+    <style>
+        h1{  /*제목 표현*/
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px; /*상하좌우 20씩*/
+            text-align: center;
+        }
+
+
+        h2{
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+
+
+        p{
+            font-size: 14px;  /*글씨는 기존보다 작게 했다*/
+            line-height: 1.4; /*글자간격벌리기*/
+            padding: 10px;
+        }
+
+
+        .container{
+            border: 3px solid orange;
+            width: 800px; /*조금 줄였음*/
+            margin : 0 auto;  /*h1에 마진이 있기 때문에 상하로 더주면 거리가 더 멀어진다. 원하면 줘도 되지만 이정도가 괜찮으니 패스*/
+        }
+
+
+        header{
+            border: 3px solid yellow;
+        }
+
+
+
+        nav{
+            border: 3px solid purple;
+            width :150px;
+            height : 200px;
+            float:left; /*왼쪽으로 밀어줄꺼임*/
+        }
+
+
+        section{
+            width:500px;
+            border: 3px solid green;
+            float: right; /*float안쓰고 마진-right써도 될꺼같아서 마진 씀 > float: right; 써도 됨. 이러면 width:500px; 까지 줘야됨.*/
+
+        }
+
+        footer{
+            border: 3px solid blue;
+
+        }
+
+
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    
+    
+    <h1>float 속성을 이용한 레이아웃</h1>
+
+ <!-- 컨테이너는 많이 사용한다. 전체 영역을 잡을 때 사용한다. 의미는 없는데..그냥 많이 사용함 -->
+    
+    <div class="container">
+
+        <header>
+            <h2>header 영역</h2>
+        </header>
+
+        <div class="main-content clearfix">
+            <nav>
+                <h2>nav 영역</h2>
+            </nav>
+            <section>
+                <h2>section 영역</h2>
+                <p>
+                    <!--아티클도 사용가능하지만 p로 썼음-->
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae elit et urna condimentum fermentum eget
+                    nec sapien. Suspendisse suscipit est eu libero convallis, nec vestibulum diam porta. Vivamus auctor aliquet
+                    libero ac rutrum. Nunc suscipit tellus sit amet dui accumsan blandit. Pellentesque feugiat, orci in luctus
+                    interdum, metus dui pretium eros, rutrum consectetur quam dui tincidunt metus. Suspendisse potenti. Mauris
+                    ac neque ut ante pellentesque accumsan nec quis velit. Proin rhoncus consequat ipsum, vel condimentum enim
+                    pharetra rutrum. Vestibulum quis felis sit amet lacus blandit tempor.
+                </p>
+            </section>
+        </div>
+
+        <footer>
+            <h2>footer 영역</h2>
+        </footer>
+    </div>
+
+
+
+
+
+</body>
+</html>
