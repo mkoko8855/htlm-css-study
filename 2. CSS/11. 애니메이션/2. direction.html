@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            border-radius: 10px;
+            margin: 30px;
+            animation: move 2s linear 0.5s infinite reverse;  /*단축속성!, 지연시간은 0.5초를 의미.*/
+
+        }
+
+
+        /*선언 먼저 하고 애니메이션 쓰자*/
+        @keyframes move {
+            0%{
+                transform: translate(0, 0);   /*시작부분이니 움직이지 않게하기 위해 가만히 있어라*/
+            }
+            25%{
+                transform: translate(100px, 0);  /*x축으로 100 y축으로 0*/
+            }
+            50%{
+                transform: translate(100px, 100px);  /*x축100, y축 100*/
+            }
+            75%{
+                transform: translate(0, 100px);
+            }
+            100%{
+                transform: translate(0, 0);
+            }
+        }
+
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+        <div class="box"></div>
+    
+
+
+
+
+
+</body>
+</html>

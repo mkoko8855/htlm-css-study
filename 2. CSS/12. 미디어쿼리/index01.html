@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        @media (min-width: 768px) {  /*가로길이가 768이 되는 순간 box을 지정한 것이 보인다. */
+            .box1 {
+                border: 1px solid black;
+            }
+        }
+
+        @media (max-width: 767px) {   /*가로최대가 767보다 작을 경우에는 box1을 보이지 않게 진행 해주다가*/
+            .box1 {
+                display: none;
+            }
+        }
+
+        /*1300 이상은 이렇게 동작하라*/
+        @media(min-width: 1300px){
+            .box2 .inner{
+                float: left;
+                width:16.6666%;
+            }
+        }
+
+
+        /*768~1299 까지는 이렇게 동작하라*/
+        @media (max-width: 1299px){
+            .box2 .inner{
+                width: 25%;
+                float: left;
+            }
+        }
+
+        /*768p 미만에서는 이렇게 동작하라*/
+        @media (max-width: 767px){
+            .box2 .inner{
+                width: 50%;
+                float: left;
+            }
+        }
+
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box1">
+        내용.....
+    </div>
+
+    <div class="box2">
+        <div class="inner">내용</div>
+        <div class="inner">내용</div>
+        <div class="inner">내용</div>
+        <div class="inner">내용</div>
+        <div class="inner">내용</div>
+        <div class="inner">내용</div>
+    </div>
+
+</body>
+
+</html>

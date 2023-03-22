@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .box{
+        width: 100px;
+        height: 100px;
+        background: tomato;
+        border-radius: 10px;
+        margin: 30px;
+        animation: size-up 3s linear infinite alternate;  /*0 100 100 0 100 100 0 100 100 0 순으로 가는게 alternate다.*/  
+        text-align: center;
+        line-height: 100px;   /*수평정렬*/
+    
+    }
+
+    @keyframes size-up {
+        0%{
+            width: 100px;
+        }
+        100%{
+            width: 100%;
+        }
+    }
+
+
+    .box::before{  /*가상요소선택자*/
+        content: '재생중';
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+
+    .box:hover{  /*마우스 갖다 대면 멈춘다.*/
+        animation-play-state: paused;  /*기본값은 running인데 어차피 호버 벗어나면 다시 동작할것이니 running은안써도되겠지*/
+        background: skyblue;
+    }
+
+
+    .box:hover::before{
+        content: '중지됨';
+        color: #000;
+    }
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <div class="box"></div>
+
+
+
+    
+</body>
+</html>

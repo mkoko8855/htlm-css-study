@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+
+        .box:hover{
+            /*애니메이션 작성하고 다시 호버와서*/
+            animation-name: grow-up;
+            animation-duration: 3s;  /*3초동안*/
+            animation-iteration-count: infinite;  /*반복으로 할거고 무한반복할것이다. 1번줘도되고 2번줘도된다. 기본값은 1번이다.*/
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-delay: 1s;
+            animation-direction: alternate-reverse ;   /*애니메이션이 진행되는 방향. 즉, 반복 방향. 기본값은 normal이다. 즉, 정방향으로.*/
+        
+
+
+            
+            /*그러나 다 필요없이 단축속성가능*/
+            
+            /*순서 : 이름 지속시간은 필수고 [이름 지속시간 타이밍함수(안줘도됨 기본값잇음) 대기시간 반복횟수 반복방향] 순서이다.*/
+            /*animation: grow-up 1s ease-in-out 1s infinite alternate;           fill mode도 뜨는데 곧 배울 것이다.*/
+        
+        
+        }
+
+
+        /*애니메이션을 직접 만들기 > identifier에는 이름을 아무거나 지어주면 된다. */
+        @keyframes grow-up {
+            /*첫번째는 구간 나누기, 나는 3구간으로 나눠보았다. > 0 50 100
+              더잘하고 세세하게 만들꺼면 1%단위로 나눠도된다.
+            */
+            0%{
+                width:100px;   /*위에 .box를 100px로 해놨으니 시작은 100px로 시작할래~*/
+            }
+            50%{
+                width:500px;   /*위에 animation-direction:reverse를 주면 0>50>100이 아니라 100>50>0>100>50>0으로 간다. alternate를 주면 0>50>100>50>0 이런식이다. alternate-reverse는 100>50>0>50>100>50>0 식이다.*/
+            }
+            100%{
+                width:300px;
+            }
+        }
+
+        
+
+
+
+
+
+
+
+
+    </style>
+
+
+
+
+
+</head>
+<body>
+
+    <div class="box"></div>
+
+
+
+
+
+
+    
+</body>
+</html>

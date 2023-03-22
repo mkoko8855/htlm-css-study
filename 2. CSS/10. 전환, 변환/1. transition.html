@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    <style>
+        .box{
+            width: 100px;  /*호버하면 300으로 고정된다. 아래 호버줬으니*/
+            height: 100px;
+            margin: 50px;
+            background: red;
+
+        /*트랜지션 적용 해보자*/
+            /*transition-property: all;*/  /*width만 지정. 전부 지정하고 싶으면 all 쓰면 됨*/
+            /*transition-duration: 2s;*/  /*기본값은 0초이다.*/
+            /*trasition-delay: 2s 는 마우스올린 후 2초 뒤에 실행된다. */
+
+        /*
+        transition: 속성 지속시간 딜레이 타이밍함수    이다.
+        단축속성으로 적용 해보자, 속성은 애초에 all로 자동으로 된다. 딜레이는 생략해볼래*/
+        transition: 1s ease-in-out;
+        /* transition: 0.6s cubic-bezier(0.36, 0, 0.66, -0.56); */
+
+
+        /*linear는 늘어나고 줄어드는 시간이 같다. */
+        /*ease-in은 느리다가 빨라진다.*/
+        /*ease-out은 빠르다가 느려진다.*/
+        /*ease-in-out은 느리다 빠르다 느려진다. */
+        /*https://easings.net/ko 사이트 가서 확인해봐도됨 다양한 함수들을 제공함*/
+        /*가서 복사해와도됨 원하는거, transition: 0.6s cubic-bezier(0.36, 0, 0.66, -0.56); 이런거*/
+        }
+
+        
+        .box:hover{
+            width: 300px;
+            background: skyblue;
+        }
+
+
+        
+
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+
+    <div class="box"></div>
+
+
+
+
+
+
+    
+</body>
+</html>

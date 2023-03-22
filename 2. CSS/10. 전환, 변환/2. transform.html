@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        div[class^=box]{
+            /*클래스이름이 박스라는 이름으로 시작한다면 전부다 지목!
+              클래스이름이 박스라는 이름으로 끝난다면 어떤 기호로 표현하나?
+              끝난다는 것은 div[class$=box] 이다. 
+            */
+
+        width: 200px;
+        height: 200px;
+        background: orange;
+        margin: 50px;
+        font-size: 30px;
+        text-align: center;
+        line-height: 200px;
+        transition: 2s; /*지속시간 2초, 나머지는 기본값*/
+        }
+
+        .box1:hover{
+            transform: rotate(720deg);   /*각도는 720도로, 720도를 도는 것이다.*/
+        }
+
+        .box2:hover{
+            transform: translate(100px, 100px);  /*x축으로 100, y축으로 100주면 해당 위치로 박스가 이동한다. */
+            /*transform: translateY(-100px); 쓰면 위로 붕 뜨겠지*/
+        }
+
+
+        .box3:hover{
+            transform: scale(0.7, 1.5);  /*x축으로 0.7줄고 y축으로 1.5늘어난다 > 홀쭉해지겠지?*/
+        }
+
+
+        .box4:hover{
+            transform: skew(0, 20deg);  /*기울기이다. x축으로 0 , y축으로 20도만큼 기울여줘*/
+        }
+
+
+        .box5:hover{
+            /*단축속성으로 여러개를 한번에 지정 가능하다*/
+            transform: translate(30px, -20px) skewX(-20deg) scale(0.7);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+
+
+
+</head>
+<body>
+
+        <!--         .box$*5{$}           -->
+
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+    .box{
+        width: 100px;
+        height: 100px;
+        background: tomato;
+        border-radius: 10px;
+        margin: 30px;
+        animation: move 1s linear 2s;  /*단축속성!, 지연시간은 0.5초를 의미.*/
+        animation-fill-mode: forwards; /*기본값은 none이며 기본위치에서 시작하고 애니메이션 시작 위치로 이동하고 동작 후엔 기존 위치로 다시 돌아와서 종료되는 형태가 필모드를 사용하지 않아도 기본값이다.*/
+    
+        /*forwards는 기존위치에서 시작하고 애니메이션 시작 위치로 이동하고 끝난 후엔 끝난 자리에서 끝남. 즉, 돌아가지 않음*/
+        /*backwards는 기존이 아닌 애니메이션 시작 위치에서 시작하고 끝나면 기존 위치로 돌아간다*/
+        /*both는 시작도 애니메이션 시작부터, 끝나는것도 애니메이션 끝나는 부분에서 끝이다*/
+
+        /*단축 속성도 가능 animation:move 2s linear 2s both 이런식으로 써도 된다.*/
+    
+    }
+
+
+    @keyframes move {
+    0%{
+        transform: translate(100px, 100px);
+        background: dodgerblue;
+    }    
+
+    100%{
+        transform: translate(300px, 100px);
+        background: yellowgreen;
+    }
+}
+
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+    
+    <div class="box"></div>
+
+
+
+
+
+
+
+
+</body>
+</html>
