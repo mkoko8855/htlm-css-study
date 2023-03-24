@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 470px;
+            border: 4px solid #000;
+            display: flex;
+            /*flex-direction: row;*.        /*
+                                            플렉스디렉션을 안작성하면 row가 기본이다.
+                                            row를줘도 변함이 flex와 차이는 없으나,
+
+                                            flex-row는 ABCDE에서 오른쪽으로붙으며 EDCBA로 바뀐다.
+
+                                            column은 열로 정렬된다.
+
+                                            column-reverse는 수직(열)로 정렬되지만 역순으로 된다.
+                                            */
+        
+            /*flex-wrap: wrap-reverse;*/  /*wrap은 기본값이 nowrap이다. 즉, 한줄표시라는 것이다.
+        
+                                            wrap이라고 치면, 변함이 없는데 
+                              
+                                            부모컨테이너 크기를 줄여보자
+                              
+                                            weight470을 주고 nowrap을 쓰면 어떻게든 가로로 배치한다.
+
+                                            그냥 wrap은 가로로 배치하되, 줄개행도 해준다.
+                              
+                                            가로로 배치하다 줄개행 할꺼면 wrap쓰던가 박스를 따로 잡아서 만들던가 하자.
+                              
+                                            wrpa-reverse 는 역순배치다.
+
+                                            */
+
+
+
+        /*flex-flow를 통해 direction과 wrap을 한번에 지정 가능하다*/
+        flex-flow: row wrap;
+
+            
+
+
+
+                                        }
+
+
+        .item{
+            width: 150px;
+            height: 100px;
+            background: red;
+            border: 4px dashed orange;
+            border-radius: 10px;
+            font-size: 40px;
+        }
+        
+
+
+
+
+
+    </style>
+    
+
+
+
+
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    <style>
+
+
+
+        /*   교차축과 주축의 정렬 방식을 지정하는 justify-content    */
+
+
+
+        .container{
+            border: 4px solid #000;
+            display: flex;
+            flex-flow: row wrap;  /* 변함 없을 텐데 마우스로 화면 비율 줄이면 변함*/
+            
+            justify-content :space-around; /* 얘 기본값은 flex-start이다. 시작점부터 정렬한다!
+                                            시작점을 알기 위해선 교차축과 주축을 알아야 한다.
+                                            item이 쌓이는 방향 축이 주축이고
+                                            주축을 크로스하는 축이 교차축이다.
+            
+                                            flex-end를 주면 끝점이 시작점이다.
+                                            그러나 박스 순서를 바뀌진 않는다.
+                                            지금은 정렬법에 대해서 공부중이니까.
+                                           
+                                            space-between은 시작item은 시작점으로,
+                                            끝item은 끝점으로 하되,
+                                            그 사이 간격은 균등하게 먹인다.
+                                            즉, 비율 잴 필요가 없이 깔끔하다.
+                                           
+                                           
+                                            space-around는 전체 공백을 준다.
+                                            시작점과 끝점을 맞추지 않았다는 것이 특징이다.
+                                           
+
+                                            space-evenly는 완벽하게 공백이 전부 동일하다.
+
+
+                                            space-around는 시작과 끝점 공백이 약간씩 다르다.
+                                            즉, 박스를 둘러싼 공백을 생성한다.
+                                            그렇기 때문에 첫번째 박스와 마지막 박스의 공백과
+                                            그렇지 않은 공백의 크기가 달라진다.
+                                            즉, 박스를 둘러싼 공백이 기준이 된다.
+                                            
+                                            
+                                            center는 사이 공백은 없지만
+                                            그냥 가운데로 몰아준다!
+                                            */
+            
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        /*비교하려고 박스 하나 더 만들었음*/
+        .container.c2{
+            justify-content: center; 
+        }
+
+
+
+
+
+
+        .item{
+            width: 150px;
+            height: 100px;
+            background: red;
+            border: 4px dashed orange;
+            border-radius: 10px;
+            font-size: 40px;
+        }
+
+
+    </style>
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+    <!--    교차축과 주축의 정렬 방식을 지정하는 justify-content     -->
+
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+    <div class="container c2">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+
+    
+</body>
+</html>
